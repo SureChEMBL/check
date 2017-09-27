@@ -1,0 +1,56 @@
+Source: golang-check.v1
+Section: devel
+Priority: extra
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Sergio Schvezov <sergio.schvezov@canonical.com>,
+           Martín Ferrari <tincho@debian.org>,
+           Michael Stapelberg <stapelberg@debian.org>,
+           Anthony Fok <foka@debian.org>
+Build-Depends: debhelper (>= 9),
+               dh-golang,
+               golang-any,
+Standards-Version: 3.9.8
+Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-check.v1.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-check.v1.git
+Homepage: http://labix.org/gocheck
+XS-Go-Import-Path: gopkg.in/check.v1
+
+Package: golang-gopkg-check.v1-dev
+Provides: golang-check.v1-dev, golang-github-go-check-check-dev
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Replaces: golang-check.v1-dev (<< 0.0+git20160105.0.4f90aea-2~)
+Breaks: golang-check.v1-dev (<< 0.0+git20160105.0.4f90aea-2~)
+Description: Rich testing extension for Go's testing package
+ The Go language provides an internal testing library, named testing, which is
+ relatively slim due to the fact that the standard library correctness by
+ itself is verified using it. The check package, on the other hand, expects the
+ standard library from Go to be working correctly, and builds on it to offer a
+ richer testing framework for libraries and applications to use.
+ .
+ Package "gopkg.in/check.v1" includes features such as:
+ .
+    - Helpful error reporting to aid on figuring problems out
+    - Richer test helpers: assertions which interrupt the test immediately,
+      deep multi-type comparisons, string matching, etc
+    - Suite-based grouping of tests
+    - Fixtures: per suite and/or per test set up and tear down
+    - Benchmarks integrated in the suite logic (with fixtures, etc)
+    - Management of temporary directories
+    - Panic-catching logic, with proper error reporting
+    - Proper counting of successes, failures, panics, missed tests, skips, etc
+    - Explicit test skipping
+    - Support for expected failures
+    - Verbosity flag which disables output caching (helpful to debug hanging
+      tests, for instance)
+    - Multi-line string reporting for more comprehensible failures
+    - Inclusion of comments surrounding checks on failure reports
+    - Fully tested (it manages to test itself reliably)
+
+Package: golang-check.v1-dev
+Section: oldlibs
+Architecture: all
+Depends: golang-gopkg-check.v1-dev, ${misc:Depends}
+Description: Transitional package for golang-gopkg-check.v1-dev
+ This is a transitional package to ease upgrades to the
+ golang-gopkg-check.v1-dev package. It can safely be removed.

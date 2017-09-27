@@ -1,0 +1,76 @@
+golang-check.v1 (0.0+git20161208.0.20d25e2-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Remove Built-Using from arch:all -dev package
+
+ -- Michael Hudson-Doyle <mwhudson@debian.org>  Wed, 27 Sep 2017 08:40:08 -0400
+
+golang-check.v1 (0.0+git20161208.0.20d25e2-1) unstable; urgency=medium
+
+  * New upstream snapshot
+
+ -- Anthony Fok <foka@debian.org>  Sun, 01 Jan 2017 19:48:57 -0700
+
+golang-check.v1 (0.0+git20160105.0.4f90aea-2) unstable; urgency=medium
+
+  * Rename golang-check.v1-dev to golang-gopkg-check.v1-dev
+    for pkg-go policy compliance.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 02 Jun 2016 15:52:14 -0600
+
+golang-check.v1 (0.0+git20160105.0.4f90aea-1) unstable; urgency=medium
+
+  * Imported new upstream snapshot
+  * Add debian/gbp.conf
+  * Update debian/control
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Use secure https URLs for Vcs-* fields
+    - Add XS-Go-Import-Path field
+    - Add myself as to the list of Uploaders
+    - Change Build-Depends on golang-go to golang-any
+
+ -- Anthony Fok <foka@debian.org>  Thu, 02 Jun 2016 15:26:47 -0600
+
+golang-check.v1 (0.0+git20150729.11d3bc7-3) unstable; urgency=medium
+
+  * Team upload.
+  * Install compatibility symlink for "github.com/go-check/check".
+  * Provides += "golang-github-go-check-check-dev".
+  * Standards-Version: 3.9.7.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 19 Mar 2016 14:23:16 +1100
+
+golang-check.v1 (0.0+git20150729.11d3bc7-2) unstable; urgency=medium
+
+  * debian/patches/01-Skip_flaky_tests.patch: Avoid running flaky tests.
+    Closes: #796806.
+
+ -- Martín Ferrari <tincho@debian.org>  Thu, 03 Sep 2015 14:06:46 +0000
+
+golang-check.v1 (0.0+git20150729.11d3bc7-1) unstable; urgency=medium
+
+  * Import new upstream snapshot.
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Thu, 30 Jul 2015 09:37:23 +0200
+
+golang-check.v1 (0.0+git20150627.b3d3430-2) unstable; urgency=medium
+
+  * debian/copyright: Add explicit copyright statement about benchmark.go.
+    It has different authors and license (BSD-3). Spotted by Thorsten Alteholz
+    from ftp-master.
+  * debian/control: Add missing control fields.
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 28 Jun 2015 01:03:56 +0000
+
+golang-check.v1 (0.0+git20150627.b3d3430-1) unstable; urgency=medium
+
+  * Update to latest upstream commit, and upload to Debian.
+
+ -- Martín Ferrari <tincho@debian.org>  Sat, 27 Jun 2015 06:51:59 +0000
+
+golang-check.v1 (0.0~git20150225-0ubuntu1) unstable; urgency=low
+
+  * Initial package. (Closes #779230)
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Wed, 25 Feb 2015 09:31:29 -0300
